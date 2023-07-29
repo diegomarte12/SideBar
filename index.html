@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="./css/sidemenu.css">
+</head>
+<body>
+    <div id="sidemenu" class="menu-collapsed">
+        <div id="header">
+            <div id="title">
+                <span>MARTELAND</span>
+            </div>
+            <div id="menu-btn">
+                <div class="btn-hamburguer"></div>
+                <div class="btn-hamburguer"></div>
+                <div class="btn-hamburguer"></div>
+            </div>
+        </div>
+        <div id="profile">
+            <div id="photo">
+                <img src="./images/MESSI.jpg" alt="">
+            </div>
+            <div id="name">
+                <span>Diego Martelo</span>
+            </div>
+        </div>
+        <div id="menu-items">
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="./images/icons/shoe.png" alt=""></div>
+                    <div class="title">Zapatos</div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="./images/icons/camisa.png" alt=""></div>
+                    <div class="title">Camisas</div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="./images/icons/glas.png" alt=""></div>
+                    <div class="title">Gafas</div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="./images/icons/knif.png" alt=""></div>
+                    <div class="title">Cuchillos</div>
+                </a>
+            </div>
+            <div class="item separator">
+            </div>
+        </div>
+    
+    </div>
+    
+    <div id="main-container">
+        <h1>DIEGO MARTELO</h1>
+    </div>
+
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');
+        btn.addEventListener('click', e => {
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+            
+            document.querySelector('body').classList.toggle('body-expanded');
+        });
+
+    </script>
+
+</body>
+</html>
